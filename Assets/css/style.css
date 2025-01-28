@@ -1,6 +1,10 @@
 
+body {
 
-/* styles.css */
+    color: white;
+}
+
+/* css for img */
 .imgBank img {
     width: 100%;
     height: 100%;
@@ -9,15 +13,35 @@
     object-fit: cover;
 }
 
+/* css for content*/
+
 .contentBank {
 
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 55%;
+    left: 35%;
     transform: translate(-50%, -50%);
-    color: white; /* Text color for better visibility */
-    text-align: center;
+    text-align: left;
     z-index: 1; /* Ensure the text is in front of the image */
+}
+
+.contentBank h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600; /* Semi-bold */
+    text-align: left;
+    text-shadow: 2px 2px 4px rgb(40, 67, 8);
+}
+
+.contentBank h3 {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: left;
+    text-shadow: 2px 2px 4px rgb(40, 67, 8);
+}
+
+.contentBank p {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: left;
+    text-shadow: 2px 2px 4px rgb(40, 67, 8);
 }
 
 .btnBank {
