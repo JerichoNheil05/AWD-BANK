@@ -4,6 +4,40 @@ body {
     color: white;
 }
 
+/* css for a*/
+
+.headingBank {
+    width: 100%;
+    background-color: #ffffff; /* Optional: Set a background color */
+}
+
+.navBank {
+    display: flex;
+    justify-content: space-between; /* Space between the heading and links */
+    align-items: center;
+}
+
+.ubank {
+    padding-left: 1rem;
+    color: black;
+    font-family: 'Poppins', sans-serif; /* Optional: Set a font */
+    font-weight: 600; /* Semi-bold */
+    margin: 0; /* Remove default margin */
+}
+
+.aBank {
+    padding-right: 3rem;
+    display: flex;
+    gap: 1rem; /* Space between links */
+}
+
+.aBank a {
+    text-decoration: none; /* Remove text decoration */
+    color: black; /* Set link color to black */
+    font-family: 'Poppins', sans-serif; /* Optional: Set a font */
+    font-weight: 400; /* Normal weight */
+}
+
 /* css for img */
 .imgBank img {
     width: 100%;
@@ -18,8 +52,8 @@ body {
 .contentBank {
 
     position: absolute;
-    top: 55%;
-    left: 35%;
+    top: 40%;
+    left: 25%;
     transform: translate(-50%, -50%);
     text-align: left;
     z-index: 1; /* Ensure the text is in front of the image */
