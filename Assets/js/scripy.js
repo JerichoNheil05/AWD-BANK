@@ -1,31 +1,38 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const balanceDisplay = document.getElementById("balance");
-    const transactionList = document.getElementById("transactionList");
+// Get elements
+const balanceElement = document.getElementById('balance');
+const transactionListElement = document.getElementById('transactionList');
 
-    let balance = parseFloat(localStorage.getItem("balance")) || 0;
-    let transactions = JSON.parse(localStorage.getItem("transactions")) || [];
+// Load balance and transaction history from localStorage
+function loadData() {
+    const balance = localStorage.getItem('balance') || 0;
+    const transactions = JSON.parse(localStorage.getItem('transactions')) || [];
 
-    function updateTransactionList() {
-        transactionList.innerHTML = "";
-        transactions.forEach((transaction) => {
-            const li = document.createElement("li");
-            li.textContent = `${transaction.type}: ₹${transaction.amount} (${transaction.date})`;
+    balanceElement.innerText = `₹${balance}`;
+    transactionListElement.innerHTML = transactions.map(transaction => 
+        `<li>${transaction}</li>`
+    ).join('');
+}
 
-            // Style based on deposit or withdrawal
-            if (transaction.type === "Deposit") {
-                li.style.color = "green"; // Deposits in green
-            } else {
-                li.style.color = "red"; // Withdrawals in red
-            }
+// Update balance and transaction history
+function updateTransaction(amount, type) {
+    let balance = parseFloat(localStorage.getItem('balance') || 0);
+    const transactions = JSON.parse(localStorage.getItem('transactions')) || [];
 
-            transactionList.appendChild(li);
-        });
+    if (type === 'deposit') {
+        balance += parseFloat(amount);
+        transactions.push(`Deposited ₹${amount}`);
+    } else if (type === 'withdraw') {
+        balance -= parseFloat(amount);
+        transactions.push(`Withdrew ₹${amount}`);
     }
 
-    function updateBalance() {
-        balanceDisplay.textContent = `₹${balance.toFixed(2)}`;
-    }
+    // Save updated balance and transactions
+    localStorage.setItem('balance', balance);
+    localStorage.setItem('transactions', JSON.stringify(transactions));
 
-    updateTransactionList();
-    updateBalance();
-});
+    // Update the UI
+    loadData();
+}
+
+// Call loadData on page load
+loadData();

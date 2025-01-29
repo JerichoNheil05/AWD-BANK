@@ -279,6 +279,11 @@ background-color: rgb(26, 157, 8);
   color: #42ff03;
 }
 
+.transaction-list{
+  text-align: left;
+  margin-left: 3rem;
+}
+
 /* css for footer*/
 
 .footerbank{

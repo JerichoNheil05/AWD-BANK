@@ -1,39 +1,16 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const withdrawForm = document.getElementById("withdrawForm");
-    const withdrawTransactionList = document.getElementById("withdrawTransactionList");
+// Handle withdraw action
+document.querySelector('.withdrawcard button').addEventListener('click', function() {
+    const amount = document.getElementById('amount').value;
 
-    // Load withdrawals from localStorage
-    let withdrawals = JSON.parse(localStorage.getItem("withdrawals")) || [];
+    let currentBalance = parseFloat(localStorage.getItem('balance') || 0);
 
-    function updateWithdrawList() {
-        withdrawTransactionList.innerHTML = "";
-        withdrawals.forEach((withdrawal, index) => {
-            const li = document.createElement("li");
-            li.textContent = `Name: ${withdrawal.name}, Amount: $${withdrawal.amount}`;
-            withdrawTransactionList.appendChild(li);
-        });
+    if (amount && !isNaN(amount) && amount > 0 && currentBalance >= amount) {
+        updateTransaction(amount, 'withdraw');
+        alert(`Withdrew ₹${amount} successfully!`);
+        document.getElementById('amount').value = ''; // Clear the input
+    } else if (amount && currentBalance < amount) {
+        alert('Insufficient balance to withdraw this amount.');
+    } else {
+        alert('Please enter a valid amount to withdraw.');
     }
-
-    withdrawForm.addEventListener("submit", function(event) {
-        event.preventDefault();
-
-        const name = document.getElementById("name").value;
-        const card = document.getElementById("card").value;
-        const amount = document.getElementById("withdrawAmount").value;
-
-        if (!name || !card || amount <= 0) {
-            alert("Please enter valid details.");
-            return;
-        }
-
-        // Save withdrawal
-        const newWithdrawal = { name, card, amount };
-        withdrawals.push(newWithdrawal);
-        localStorage.setItem("withdrawals", JSON.stringify(withdrawals));
-
-        updateWithdrawList();
-        withdrawForm.reset();
-    });
-
-    updateWithdrawList();
 });
