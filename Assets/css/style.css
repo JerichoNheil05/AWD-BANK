@@ -4,47 +4,70 @@ body {
     color: white;
 }
 
-/* css for a*/
-
 .headingBank {
-    width: 100%;
-    background-color: #ffffff; /* Optional: Set a background color */
+  padding-top: 0.5rem;
+  width: 100%;
 }
 
 .navBank {
-    display: flex;
-    justify-content: space-between; /* Space between the heading and links */
-    align-items: center;
+  display: flex;
+  justify-content: space-between; /* Space between the heading and links */
+  align-items: center;
 }
 
 .ubank {
-    padding-left: 1rem;
-    color: black;
-    font-family: 'Poppins', sans-serif; /* Optional: Set a font */
-    font-weight: 600; /* Semi-bold */
-    margin: 0; /* Remove default margin */
+  padding-left: 1rem;
+  color: rgb(26, 157, 8);
+  font-family: 'Poppins', sans-serif; /* Optional: Set a font */
+  font-weight: 600; /* Semi-bold */
+  margin: 0; /* Remove default margin */
 }
 
-.aBank {
-    padding-right: 1.5rem;
-    display: flex;
-    gap: 1rem; /* Space between links */
+.withdrawBtn {
+  padding-right: 1rem;
+
+}
+
+.aBank .{
+  padding-right: 1.5rem;
+  display: flex;
+  gap: 1rem; /* Space between links */
 }
 
 .aBank a {
-    margin-bottom: 0.5rem;
-    text-decoration: none; /* Remove text decoration */
-    color: black; /* Set link color to black */
-    font-family: 'Poppins', sans-serif; /* Optional: Set a font */
-    font-weight: 400; /* Normal weight */
+  margin-bottom: 0.5rem;
+  text-decoration: none; /* Remove text decoration */
+  color: rgb(223, 232, 222); /* Set link color to black */
+  font-family: 'Poppins', sans-serif; /* Optional: Set a font */
+  font-weight: 400; /* Normal weight */
 }
 
 .accountBtn {
+  margin-right: 2rem;
+display: inline-block;
+padding: 10px 20px;
+font-size: 16px;
+color: white;
+background-color: rgb(26, 157, 8);
+text-align: center;
+text-decoration: none;
+border-radius: 100px;
+transition: background-color 0.3s;
+
+}
+
+.accountBtn:hover {
+color: white;
+background-color: rgb(26, 157, 8);
+}
+
+.withdrawBtn {
+  margin-right: 1rem;
   display: inline-block;
   padding: 10px 20px;
   font-size: 16px;
   color: white;
-  background-color: #00fd00;
+  background-color: rgb(26, 157, 8);
   text-align: center;
   text-decoration: none;
   border-radius: 100px;
@@ -52,9 +75,9 @@ body {
 
 }
 
-.accountBtn:hover {
+.withdrawBtn:hover {
   color: white;
-  background-color: #37fc00;
+  background-color: rgb(26, 157, 8);
 }
 
 
@@ -71,6 +94,7 @@ body {
 
 .contentBank {
 
+    color: #ffffff;
     position: absolute;
     top: 40%;
     left: 25%;
@@ -83,26 +107,27 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 600; /* Semi-bold */
     text-align: left;
-    text-shadow: 2px 2px 4px rgb(40, 67, 8);
+    color: #000000c2;
 }
 
 .contentBank h3 {
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: left;
-    text-shadow: 2px 2px 4px rgb(40, 67, 8);
+    color: black;
 }
 
 .contentBank p {
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: left;
-    text-shadow: 2px 2px 4px rgb(40, 67, 8);
+    color: #000200;
+    padding-bottom: 3rem;
+
 }
 
-.btnBank {
-    display: flex;
-    flex-direction: row; /* Stack buttons vertically */
+.btnBank a {
+    text-decoration: none;
+    flex-direction: column; /* Stack buttons vertically */
     align-items: flex-start; /* Align buttons to the left */
-    padding: 1rem; /* Add padding of 1 rem */
 }
 
 
@@ -206,11 +231,60 @@ body {
     }
   }
 
+
+/* css for transaction*/
+
+.underline{
+  padding-left: 3rem;
+  color: #28a000;
+  font-size: 5rem
+}
+
+.transactionHeader{
+  text-align: left;
+  padding-left: 3rem;
+}
+
+.savings {
+  text-align: left;
+  padding-left: 3rem;
+}
+
+.transact{
+  color: black;
+}
+
+.balance-box {
+  margin-left: 3rem;
+  border-radius: 20px;
+  padding: 20px;
+  width: 88%;
+  text-align: center;
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgb(170, 170, 170);
+}
+
+.balance-box p {
+  
+  text-align: left;
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.balance-box h1 {
+  text-align: left;
+  margin: 10px 0;
+  font-size: 24px;
+  color: #42ff03;
+}
+
 /* css for footer*/
 
 .footerbank{
-  color: rgb(156, 149, 149);
-  text-shadow: 0.5px 0.5px 0.2px rgb(81, 80, 80);
+  color:#45a049;
+  text-shadow: 0.5px 0.px 0.2px rgb(81, 80, 80);
   text-align: center;
+  font-family:'Times New Roman', Times, serif;
 
 }

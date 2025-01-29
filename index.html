@@ -17,7 +17,7 @@
     
             <section class="aBank">
                 <a href="Register"></a>
-                <a href="login"></a>
+                <a href="Withdraw" class=""></a>
                 <a href="Account" class="accountBtn">Account</a>
             </section>
         </div>
@@ -42,14 +42,37 @@
                 </p>
 
                 <div class="btnBank">
-                    <button class="btnDeposit">Deposit</button>
-                    <button class="btnWithdraw">Withdraw</button>
+                    <a href="./Pages/deposit/index.html" class="btnDeposit">Deposit</a>
+                    <a href="./Pages/withrdaw/index.html" class="btnWithdraw">Withdraw</a>
                 </div>
 
             </div>
         </div>
 
     </div>
+
+    <div class="transact">
+        <div class="underline">_</div>
+
+        <div class="transactionHeader">
+            <h1>TRANSACTION</h1>
+        </div>
+
+        <div class="savings">Savings Account</div>
+
+        <div class="balance-box">
+            <p>Your Balance</p>
+            <h1 id="balance">₹0.00</h1>
+            <p>Saving A/C : xxxxx2115</p>
+        </div>
+
+        <div class="transaction-list">
+            <h2>Transaction History</h2>
+            <ul id="transactionList"></ul>
+        </div>
+    </div>
+
+    <script src="../AWD-BANK/Assets/js/scripy.js"></script>
 
     <footer class="footerbank">
         <p>All rights reserve. UBank 2025.</p>

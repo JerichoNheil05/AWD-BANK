@@ -18,7 +18,7 @@
     margin: 0; /* Remove default margin */
 }
 
-.withdrawBtn {
+.depositBtn {
     padding-right: 1rem;
 
 }
@@ -56,7 +56,7 @@
   background-color: rgb(26, 157, 8);
 }
 
-.withdrawBtn {
+.depositBtn {
     margin-right: 1rem;
     display: inline-block;
     padding: 10px 20px;
@@ -70,7 +70,7 @@
   
   }
   
-.withdrawBtn:hover {
+.depositBtn:hover {
     color: white;
     background-color: rgb(26, 157, 8);
   }
