@@ -26,17 +26,37 @@ body {
 }
 
 .aBank {
-    padding-right: 3rem;
+    padding-right: 1.5rem;
     display: flex;
     gap: 1rem; /* Space between links */
 }
 
 .aBank a {
+    margin-bottom: 0.5rem;
     text-decoration: none; /* Remove text decoration */
     color: black; /* Set link color to black */
     font-family: 'Poppins', sans-serif; /* Optional: Set a font */
     font-weight: 400; /* Normal weight */
 }
+
+.accountBtn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #00fd00;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 100px;
+  transition: background-color 0.3s;
+
+}
+
+.accountBtn:hover {
+  color: white;
+  background-color: #37fc00;
+}
+
 
 /* css for img */
 .imgBank img {
@@ -185,3 +205,12 @@ body {
       transition: linear;
     }
   }
+
+/* css for footer*/
+
+.footerbank{
+  color: rgb(156, 149, 149);
+  text-shadow: 0.5px 0.5px 0.2px rgb(81, 80, 80);
+  text-align: center;
+
+}
