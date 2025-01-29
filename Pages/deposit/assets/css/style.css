@@ -1,7 +1,6 @@
 .headingBank {
     padding-top: 0.5rem;
     width: 100%;
-    background-color: #ffffff; /* Optional: Set a background color */
 }
 
 .navBank {
@@ -32,7 +31,7 @@
 .aBank a {
     margin-bottom: 0.5rem;
     text-decoration: none; /* Remove text decoration */
-    color: black; /* Set link color to black */
+    color: rgb(0, 0, 0); /* Set link color to black */
     font-family: 'Poppins', sans-serif; /* Optional: Set a font */
     font-weight: 400; /* Normal weight */
 }
@@ -42,7 +41,7 @@
   padding: 10px 20px;
   font-size: 16px;
   color: white;
-  background-color: #00fd00;
+  background-color: rgb(26, 157, 8);
   text-align: center;
   text-decoration: none;
   border-radius: 100px;
@@ -52,22 +51,36 @@
 
 .accountBtn:hover {
   color: white;
-  background-color: #37fc00;
+  background-color: rgb(26, 157, 8);
+}
+
+/* css for img*/
+.imgDeposit img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    object-fit: cover;
 }
 
 /* css for deposit form */
 
 .depositBank {
-    padding-top: 5rem;
-    padding-left: 2.5rem;
+    padding-top: 2rem;
+    padding-left: 4rem;
 }
 
 .depositcard {
     width: 300px;
     background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    z-index: 1;
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    transform: translate(-50%, -50%);
   }
   
   .card-header {
